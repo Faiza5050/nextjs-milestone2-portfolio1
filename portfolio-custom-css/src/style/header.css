@@ -1,0 +1,164 @@
+.header {
+    width: 100%;
+    height: 60px;
+    color: #25282B;
+    background-color: #FDC435;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    margin-top: 10px;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+}
+
+.logo .default {
+    margin-left: 20px;
+    font-size: 40px;
+    transition: opacity 0.5s ease;
+}
+
+.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;
+    margin-left: 40px;
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition: 2s;
+}
+
+.logo:hover .default {
+    opacity: 0;
+}
+
+.logo:hover .hover {
+    opacity: 1;
+}
+
+.header1 {
+    width: 40%;
+}
+
+.link {
+    display: flex;
+    justify-content: space-evenly;
+    color: #25282B;
+}
+
+.link li {
+    list-style-type: none;
+}
+
+.nav {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: wheat;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    width: 30px;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #25282B;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .link {
+        display: none;
+        position: absolute;
+        width: 30%;
+        top: 80px;
+        left: 850px;
+        right: 0;
+        color: #25282B;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+        background-color: #FDC435;
+    }
+
+    .link.open {
+        display: flex;
+    }
+
+    .link li {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    .link {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .link li {
+        margin: 0 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 100px;
+    }
+
+    .logo .default,
+    .logo .hover {
+        font-size: 25px;
+    }
+
+    .link li {
+        font-size: 14px;
+    }
+
+    .hamburger {
+        height: 20px;
+        width: 25px;
+    }
+
+    .line {
+        width: 25px;
+    }
+
+    .header1 {
+        width: 50%;
+    }
+
+    .link.open {
+        padding: 10px 20px;
+    }
+}

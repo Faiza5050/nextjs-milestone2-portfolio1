@@ -1,0 +1,188 @@
+.main-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 4px 20px 5px grey;
+    background-color: #36383a;
+    padding: 20px;
+}
+
+.top-hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.hero1 {
+    color: #d49c0c;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.title {
+    color: #111213;
+    padding: 25px;
+    transition: 1S;
+}
+
+.title:hover {
+    font-size: 3em;
+    font-weight: bold;
+    color: #FDC435;
+}
+
+.para {
+    color: #bbb8b8;
+    width: 450px; /* Default width for larger screens */
+    margin: 20px auto; /* Auto margin to center the element */
+    text-align: center; /* Ensure text is centered */
+    font-size: 16px; /* Default font size */
+}
+
+.btn,
+.btn1 {
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn {
+    background-color: #FDC435;
+    color: #25282B;
+}
+
+.btn:hover {
+    background-color: wheat;
+}
+
+.btn1 {
+    background-color: wheat;
+    color: #25282B;
+}
+
+.btn1:hover {
+    background-color: #FDC435;
+}
+
+.img {
+    border-radius: 20%;
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+/* Responsive Styles for screens from 100px to 750px */
+@media screen and (max-width: 750px) {
+    .top-hero {
+        flex-direction: column;
+        /* align-items: center; */
+        /* text-align: center; */
+        margin: 20px;
+        /* padding-left: 100px; */
+        gap: 20px; /* Reduce the gap between the sections for smaller screens */
+    }
+
+    .title {
+        font-size: 24px;
+        /* padding: 10px; */
+    }
+
+    .img {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px; /* Adjust the image margin to prevent it from shifting too far down */
+    }
+
+    .para {
+        width: 30%; /* Make the paragraph take 80% of the width */
+        font-size: 18px; /* Adjust font size for smaller screens */
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 450px;
+        /* margin: 10px; */
+    }
+
+    .btn,
+    .btn1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 130px;
+        font-size: 18px;
+        margin-left: 610px;
+        /* margin: 20px; */
+    }
+
+    .main-container {
+        height: auto;
+        /* margin: 50px; */
+    }
+}
+
+/* Additional Styles for smaller screens (480px or below) */
+@media screen and (max-width: 480px) {
+    .hero1 {
+        font-size: 18px;
+    }
+
+    .top-hero {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        /* justify-content: center; */
+        margin: 20px;
+        /* align-items: start; */
+    }
+
+    .title {
+        font-size: 18px;
+        /* text-align: center; */
+    }
+
+    .para {
+        width: 30%; /* Further reduce width on very small screens */
+        font-size: 14px;
+        margin-left: 480px; /* Center the paragraph */
+        align-items: center;
+        justify-content: center;
+        /* text-align: center; */
+    }
+
+    .btn,
+    .btn1 {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        margin-right: 600px;
+    }
+
+    .img {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px; /* Prevent image from shifting too low */
+    }
+
+    .main-container {
+        height: auto;
+    }
+}
